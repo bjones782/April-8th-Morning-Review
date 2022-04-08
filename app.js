@@ -26,20 +26,24 @@ const characters = [
 ]
 
 // get an array of all names
+
+console.log(characters.map(character => {return character.name}))
+
 // get an array of all heights
+
+console.log(characters.map(character => character.height))
+
+
 // get an array of objects with just name and height properties
+
+console.log(characters.map(character => ({name: character.name, height: character.height})))
+
 // get an array of all first names
 
-const names = characters.map(character => {
-    return character.name
-})
+console.log(characters.map(character => character.name.split('a').join('aza')))
 
-const partialCharacter = characters.map(character => ({name: character.name, mass: character.mass}))
 
-const firstNames = characters.map(character => character.name.split(" ")[0])
 
-console.log(names.)
-console.log(firstNames)
 
 
 // nested arrays and objects
@@ -52,11 +56,26 @@ let heroesObject = {heroes: [
 ]}
 
 // access Wonder Woman's name
+console.log(heroesObject.heroes[0].actor)
+
+// access Aquaman's actor
+console.log(heroesObject.heroes[1].actor)
 
 
 // fix the misspelling in Black Widow's actor 
+console.log(heroesObject.heroes[3].actor = 'Scarlett Johansson')
 
-
-// add another batman actor to the array of batmans
-heroesObject.heroes[4].actor.push('Robert Pattinson')
+// add another batman actor to the array of batmans - Robert Pattinson
+console.log(heroesObject.heroes[4].actor.push("Robert Pattison"))
+console.log(heroesObject.heroes[4].actor.unshift("Robert Pattinson"))
 console.log(heroesObject.heroes[4].actor)
+
+// batmanArr = heroesObject.heroes[4].actor
+// console.log(batmanArr)
+// newArr = batmanArr 
+// newArr.push("Robert Pattison")
+// console.log("newarr", newArr)
+// console.log("batmanArr", batmanArr)
+
+// newArr = [batmanArr]
+// console.log(newArr)
